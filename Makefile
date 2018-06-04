@@ -21,13 +21,10 @@ $(VERSION_FILE):
 .SUFFIXES: .txttemplate .htemplate .cstemplate
 
 .txttemplate.txt:
-	echo Creating $@
 	$(PSCMD) -command "&{cat '$*.txttemplate' | .\Write-FileWithVersionInfo.ps1 -VersionFile '$(VERSION_FILE)' }" >$@
 
 .htemplate.h:
-	echo Creating $@
 	$(PSCMD) -command "&{cat '$*.htemplate' | .\Write-FileWithVersionInfo.ps1 -VersionFile '$(VERSION_FILE)' }" >$@
 
 .cstemplate.h:
-	echo Creating $@
 	$(PSCMD) -command "&{cat '$*.cstemplate' -Encoding OEM | .\Write-FileWithVersionInfo.ps1 -VersionFile '$(VERSION_FILE)' }" >$@

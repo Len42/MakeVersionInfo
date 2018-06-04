@@ -21,6 +21,7 @@
   <ItemGroup>
     <None Include="Get-VersionInfo.ps1" />
     <None Include="Makefile" />
+    <None Include="Write-FileWithVersionInfo.ps1" />
     <None Include="Write-VersionInfo.ps1" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
