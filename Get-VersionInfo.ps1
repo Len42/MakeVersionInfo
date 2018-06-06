@@ -19,5 +19,7 @@ if ($infoparts.Count -lt 4) {
     $versionInfo += $infoparts[3]
 }
 $versionInfo += $versionName
-$versionInfo += ("{0:r}" -f [System.DateTime]::UtcNow) -replace ",",""
+$timestamp = [System.DateTime]::UtcNow
+$versionInfo += ("{0:r}" -f $timestamp) -replace ",",""
+$versionInfo += ("{0:D}" -f $timestamp) -replace ",",""
 $versionInfo

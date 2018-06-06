@@ -5,7 +5,7 @@ param (
 )
 begin {
 	$OutputEncoding = [System.Text.Encoding]::UTF8
-	$ver = Import-Csv $VersionFile -Header "Major","Minor","Revision","Build","Tag","Timestamp"
+	$ver = Import-Csv $VersionFile -Header "Major","Minor","Revision","Build","Tag","Timestamp","BuildDate"
 }
 process {
 	$t = $Template
@@ -15,5 +15,6 @@ process {
 	$t = $t -replace "%build%", $ver.Build
 	$t = $t -replace "%tag%", $ver.tag
 	$t = $t -replace "%timestamp%", $ver.Timestamp
+	$t = $t -replace "%builddate%", $ver.BuildDate
 	Write-Output $t
 }
