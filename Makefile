@@ -26,5 +26,5 @@ $(VERSION_FILE):
 .htemplate.h:
 	$(PSCMD) -command "&{cat '$*.htemplate' | .\Write-FileWithVersionInfo.ps1 -VersionFile '$(VERSION_FILE)' }" >$@
 
-.cstemplate.h:
+.cstemplate.cs:
 	$(PSCMD) -command "&{cat '$*.cstemplate' -Encoding OEM | .\Write-FileWithVersionInfo.ps1 -VersionFile '$(VERSION_FILE)' }" >$@
