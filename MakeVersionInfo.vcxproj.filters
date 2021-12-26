@@ -19,5 +19,6 @@
     <None Include="Write-VersionInfo.ps1" />
     <None Include="Makefile" />
     <None Include="Write-FileWithVersionInfo.ps1" />
+    <None Include="InitVersionInfo-example.bat" />
   </ItemGroup>
 </Project>

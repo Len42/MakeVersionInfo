@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Get-VersionInfo.ps1" />
+    <None Include="InitVersionInfo-example.bat" />
     <None Include="Makefile" />
     <None Include="Write-FileWithVersionInfo.ps1" />
     <None Include="Write-VersionInfo.ps1" />
