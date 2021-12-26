@@ -3,13 +3,17 @@ Push-Location $ProjectDir
 $info = git describe --tags
 $isdirty = git status --short
 Pop-Location
-if ($isdirty) {
-	$versionName = "$info-dev"
+if ($info) {
+    if ($isdirty) {
+	    $versionName = "$info-dev"
+    } else {
+	    $versionName = $info
+    }
+    if ($info[0] -eq "v") {
+        $info = -join $info[1..999]
+    }
 } else {
-	$versionName = $info
-}
-if ($info[0] -eq "v") {
-    $info = -join $info[1..999]
+    $info = "0.0"
 }
 $infoparts = $info -split "[-.]"
 $versionInfo = $infoparts[0..1]
