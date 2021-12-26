@@ -1,9 +1,9 @@
-VERSION_FILE = $(SOLUTIONDIR)VersionInfo.txt
+VERSION_FILE = "$(SOLUTIONDIR)VersionInfo.txt"
 
 all: $(TARGETS)
 
 clean:
-	del $(TARGETS) "$(VERSION_FILE)""
+	del $(TARGETS) $(VERSION_FILE)
 
 rebuild: clean all
 
